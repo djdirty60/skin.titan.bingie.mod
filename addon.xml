@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- BINGIE -->
-<addon id="skin.titan.bingie.mod" version="2.1.1" name="Titan BINGIE MOD" provider-name="AchillesPunks, HugoL, Matke">
+<addon id="skin.titan.bingie.mod" version="2.1.2" name="Titan BINGIE MOD" provider-name="AchillesPunks, HugoL, Matke">
 	<requires>
-		<import version="5.15.0" addon="xbmc.gui"/>
+		<import version="5.17.0" addon="xbmc.gui"/>
 		<import addon="script.bingie.helper" version="1.1.2"/>
 		<import addon="script.skinshortcuts" version="2.1.0"/>
 		<import addon="script.skin.helper.service" version="1.30.0"/>

@@ -2791,7 +2791,7 @@
                     <param name="widget" value="Spotlight" />
                 </include>
             </focusedlayout>
-            <content target="videos" limit="1">$VAR[BingieHomeSpotlightWidgetContent]</content>
+			<content target="videos" limit="1" browse="never">$VAR[BingieHomeSpotlightWidgetContent]</content>
         </control>
     </include>
     <!-- SPOTLIGHT LOADING SPINNER -->
