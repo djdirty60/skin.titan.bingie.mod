@@ -149,12 +149,12 @@
             <param name="id" value="12"/>
             <!-- content -->            
             <include>Home_Spotlight_Settings</include>
-			<include>Home_Widgets_Settings</include>
 			<include>Home_Trailers</include>
-            <include>Home_Details_Settings</include>
+			<include>Home_Widgets_Settings</include>
+			<include>Home_Footer_Media_Flags_Ratings</include>
+			<include>Home_Details_Settings</include>
 			<include>Thumbs_Up_Down_Settings</include>
-            <include>Home_Footer_Media_Flags_Ratings</include>
-			<include>Categories_Hub</include>
+            <include>Categories_Hub</include>
 			<include>Search_Settings</include>
 			<include>Home_Menu_Settings</include>
         </include>
@@ -401,7 +401,8 @@
             <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
             <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
         </control>       	
-        <!--Disable Spotlight Content-->
+        
+		<!--Disable Spotlight Content-->
         <control type="radiobutton" id="31797">
             <include>SkinSettings_Button</include>
             <label>31881</label>
@@ -470,7 +471,52 @@
         </control>		
 	</include>
 
-    <!-- Home Widgets Settings -->
+    
+	
+	<!-- Home Trailers -->
+    <include name="Home_Trailers">
+        <control type="label" id="320081">
+            <include>SkinSettings_Header</include>
+            <label>320081</label>
+            <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
+        </control>
+		<!-- Auto Play Trailer for Spotlight Content -->
+        <control type="radiobutton" id="31798">
+            <include>SkinSettings_Button</include>
+            <label>31798</label>
+            <onclick>Skin.ToggleSetting(SpotLightTrailers)</onclick>
+            <selected>Skin.HasSetting(SpotLightTrailers)</selected>
+            <visible>!Skin.HasSetting(DisableSpotlightContent) + String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
+        </control>
+       	<!-- Auto Play Trailers in Home & Hubs -->
+        <control type="radiobutton" id="28637">
+            <include>SkinSettings_Button</include>
+            <label>31883</label>
+            <onclick>Skin.ToggleSetting(BingieAutoTrailer)</onclick>
+            <selected>Skin.HasSetting(BingieAutoTrailer)</selected>
+            <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
+        </control>
+		<!-- Enable Auto Play Trailer Only for Highlight Widget -->
+        <control type="radiobutton" id="2016">
+            <include>SkinSettings_Button</include>
+            <label>      $LOCALIZE[320231]</label>
+            <onclick>Skin.ToggleSetting(HighlightAutoTrailer)</onclick>
+            <selected>Skin.HasSetting(HighlightAutoTrailer)</selected>
+            <visible>String.IsEqual(Skin.String(HomeLayout),bingie) + Skin.HasSetting(BingieAutoTrailer)</visible>
+        </control>
+        <!-- Select Delay Interval for Auto-Trailers -->
+        <control type="button" id="43699">
+            <include>SkinSettings_Button</include>
+            <label>$LOCALIZE[31884]</label>
+            <label2>$LOCALIZE[31885]: $INFO[Skin.String(main_auto_trailer_interval.label)]</label2>
+            <visible>String.IsEqual(Skin.String(HomeLayout),bingie) + [Skin.HasSetting(BingieAutoTrailer) | Skin.HasSetting(SpotLightTrailers)]</visible>
+            <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=main_auto_trailer_interval,header=$LOCALIZE[31885])</onclick>
+        </control>		
+	</include>
+
+
+    
+	<!-- Home Widgets Settings -->
     <include name="Home_Widgets_Settings">
         <control type="label" id="23004">
             <include>SkinSettings_Header</include>
@@ -554,46 +600,53 @@
         </control>
     </include>
 	
-	<!-- Home Trailers -->
-    <include name="Home_Trailers">
-        <control type="label" id="320081">
+	
+	  <!-- Footer in Home - Ratings & Studio Logo Settings -->
+    <include name="Home_Footer_Media_Flags_Ratings">
+        <control type="label" id="23007">
             <include>SkinSettings_Header</include>
-            <label>320081</label>
+            <label>31845</label>
             <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-        </control>
-		<!-- Auto Play Trailer for Spotlight Content -->
-        <control type="radiobutton" id="31798">
-            <include>SkinSettings_Button</include>
-            <label>31798</label>
-            <onclick>Skin.ToggleSetting(SpotLightTrailers)</onclick>
-            <selected>Skin.HasSetting(SpotLightTrailers)</selected>
-            <visible>!Skin.HasSetting(DisableSpotlightContent) + String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
-        </control>
-       	<!-- Auto Play Trailers in Home & Hubs -->
-        <control type="radiobutton" id="28637">
-            <include>SkinSettings_Button</include>
-            <label>31883</label>
-            <onclick>Skin.ToggleSetting(BingieAutoTrailer)</onclick>
-            <selected>Skin.HasSetting(BingieAutoTrailer)</selected>
             <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
         </control>
-		<!-- Enable Auto Play Trailer Only for Highlight Widget -->
-        <control type="radiobutton" id="2016">
+		<!-- Enable Ratings on Home -->
+		<control type="radiobutton" id="2063">
             <include>SkinSettings_Button</include>
-            <label>      $LOCALIZE[320231]</label>
-            <onclick>Skin.ToggleSetting(HighlightAutoTrailer)</onclick>
-            <selected>Skin.HasSetting(HighlightAutoTrailer)</selected>
-            <visible>String.IsEqual(Skin.String(HomeLayout),bingie) + Skin.HasSetting(BingieAutoTrailer)</visible>
+            <label>$LOCALIZE[320048]</label>
+            <onclick>Skin.ToggleSetting(EnableRatingsOnHome)</onclick>
+            <selected>Skin.HasSetting(EnableRatingsOnHome)</selected>
         </control>
-        <!-- Select Delay Interval for Auto-Trailers -->
-        <control type="button" id="43699">
+		<!-- ratings to show on home - multiselect -->
+		<include content="SkinSettings_ActionButton">
+            <param name="id" value="2039" />
+            <param name="label" value="      $LOCALIZE[31692]" />
+            <param name="action" value="RunScript(script.skin.helper.service,action=setskinsetting,setting=home_ratings,header=$LOCALIZE[31692])" />
+            <param name="visible" value="Skin.HasSetting(EnableRatingsOnHome)" />
+        </include>	
+		<!-- Enable Studio Logo on Home -->
+		<control type="radiobutton" id="2064">
             <include>SkinSettings_Button</include>
-            <label>$LOCALIZE[31884]</label>
-            <label2>$LOCALIZE[31885]: $INFO[Skin.String(main_auto_trailer_interval.label)]</label2>
-            <visible>String.IsEqual(Skin.String(HomeLayout),bingie) + [Skin.HasSetting(BingieAutoTrailer) | Skin.HasSetting(SpotLightTrailers)]</visible>
-            <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=main_auto_trailer_interval,header=$LOCALIZE[31885])</onclick>
-        </control>		
+            <label>$LOCALIZE[31042]</label>
+            <onclick>Skin.ToggleSetting(EnableStudioLogoOnHome)</onclick>
+            <selected>Skin.HasSetting(EnableStudioLogoOnHome)</selected>
+        </control>					
+			<!--Prefer white footer -->
+			<control type="radiobutton" id="2040">
+            <include>SkinSettings_Button</include>
+            <label>$LOCALIZE[31896]</label>
+            <onclick>Skin.ToggleSetting(PreferWhiteFooter)</onclick>
+			<onclick condition="!System.HasAddon(resource.images.studios.white)">InstallAddon(resource.images.studios.white)</onclick>
+			<selected>Skin.HasSetting(PreferWhiteFooter)</selected>
+            <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
+            </control>								          	
+		<!-- Hide Ratings & Studio Logos on Spotlight/Widgets -->
+        <include content="SkinSettings_ActionButton">
+            <param name="id" value="2021" />
+            <param name="label" value="Hide Ratings & Studio Logos on Spotlight/Widgets" />
+            <param name="action" value="RunScript(script.skin.helper.service,action=setskinsetting,setting=home_footer_visibility,header=$LOCALIZE[31118])" />
+        </include>
 	</include>
+	
 
       <!-- Home Details Settings -->
       <include name="Home_Details_Settings">
@@ -602,6 +655,14 @@
             <label>31843</label>
             <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
         </control>      
+		<!-- Show Minutes Instead of Hour in Detail Section -->
+		<control type="radiobutton" id="31724">
+            <description>Do Not Display Hour Representation of the Duration</description>
+            <include>SkinSettings_Button</include>
+            <label>31724</label>
+            <onclick>Skin.ToggleSetting(DisableHoursDuration)</onclick>
+            <selected>Skin.HasSetting(DisableHoursDuration)</selected>
+        </control>
 		<!-- Disable Clearlogo in Bingie Home -->
         <control type="radiobutton" id="31818">
             <include>SkinSettings_Button</include>
@@ -781,51 +842,7 @@
         </control>
     </include>
 
-    <!-- Footer in Home - Ratings & Studio Logo Settings -->
-    <include name="Home_Footer_Media_Flags_Ratings">
-        <control type="label" id="23007">
-            <include>SkinSettings_Header</include>
-            <label>31845</label>
-            <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
-            <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
-        </control>
-		<!-- Enable Ratings on Home -->
-		<control type="radiobutton" id="2063">
-            <include>SkinSettings_Button</include>
-            <label>$LOCALIZE[320048]</label>
-            <onclick>Skin.ToggleSetting(EnableRatingsOnHome)</onclick>
-            <selected>Skin.HasSetting(EnableRatingsOnHome)</selected>
-        </control>
-		<!-- ratings to show on home - multiselect -->
-		<include content="SkinSettings_ActionButton">
-            <param name="id" value="2039" />
-            <param name="label" value="      $LOCALIZE[31692]" />
-            <param name="action" value="RunScript(script.skin.helper.service,action=setskinsetting,setting=home_ratings,header=$LOCALIZE[31692])" />
-            <param name="visible" value="Skin.HasSetting(EnableRatingsOnHome)" />
-        </include>	
-		<!-- Enable Studio Logo on Home -->
-		<control type="radiobutton" id="2064">
-            <include>SkinSettings_Button</include>
-            <label>$LOCALIZE[31042]</label>
-            <onclick>Skin.ToggleSetting(EnableStudioLogoOnHome)</onclick>
-            <selected>Skin.HasSetting(EnableStudioLogoOnHome)</selected>
-        </control>					
-			<!--Prefer white footer -->
-			<control type="radiobutton" id="2040">
-            <include>SkinSettings_Button</include>
-            <label>$LOCALIZE[31896]</label>
-            <onclick>Skin.ToggleSetting(PreferWhiteFooter)</onclick>
-			<onclick condition="!System.HasAddon(resource.images.studios.white)">InstallAddon(resource.images.studios.white)</onclick>
-			<selected>Skin.HasSetting(PreferWhiteFooter)</selected>
-            <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
-            </control>								          	
-		<!-- Select which categories to show in categories hub -->
-        <include content="SkinSettings_ActionButton">
-            <param name="id" value="2021" />
-            <param name="label" value="$LOCALIZE[31118]" />
-            <param name="action" value="RunScript(script.skin.helper.service,action=setskinsetting,setting=home_footer_visibility,header=$LOCALIZE[31118])" />
-        </include>
-	</include>
+    
 	
 	<!-- Categories Lists -->
     <include name="Categories_Hub">
@@ -926,14 +943,14 @@
             <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=home.defaultfocus,header=$LOCALIZE[31727])</onclick>
             <visible>Skin.HasSetting(AutoFocusHome)</visible>
         </control>
-        <!--disable all submenus-->
+        <!--Disable All Submenus-->
         <control type="radiobutton" id="23017">
             <include>SkinSettings_Button</include>
             <label>31265</label>
             <onclick>Skin.ToggleSetting(DisableAllSubmenus)</onclick>
             <selected>Skin.HasSetting(DisableAllSubmenus)</selected>
         </control>
-        <!--enable auto show submenus-->
+        <!--Enable Auto Show Submenus-->
         <control type="radiobutton" id="23014">
             <include>SkinSettings_Button</include>
             <label>      $LOCALIZE[31113]</label>
@@ -941,14 +958,14 @@
             <selected>Skin.HasSetting(AutoShowSubmenu)</selected>
             <visible>!Skin.HasSetting(DisableAllSubmenus)</visible>
         </control>		
-        <!--disable power button-->
+        <!--Disable Power Button-->
         <control type="radiobutton" id="23025">
             <include>SkinSettings_Button</include>
             <label>31198</label>
             <onclick>Skin.ToggleSetting(DisablePowerMenu)</onclick>
             <selected>Skin.HasSetting(DisablePowerMenu)</selected>
         </control>
-		<!-- Disable profile on menu -->    
+		<!-- Disable Profile on Sideblade Menu -->    
 		<control type="radiobutton" id="2015">
             <include>SkinSettings_Button</include>
             <label>320175</label>
@@ -3286,19 +3303,21 @@
             <label>31270</label>
             <textcolor>$INFO[Skin.String(GeneralTextColor)]</textcolor>
         </control>
-        <control type="radiobutton" id="31724">
-            <description>Do Not Display Hour Representation of the Duration</description>
-            <include>SkinSettings_Button</include>
-            <label>31724</label>
-            <onclick>Skin.ToggleSetting(DisableHoursDuration)</onclick>
-            <selected>Skin.HasSetting(DisableHoursDuration)</selected>
-        </control>
-        <!--Enab Netflix Logo on Bingie Home and Settings-->
+        <!--Enable Netflix Logo on Bingie Home and Settings-->
         <control type="radiobutton" id="2014">
             <include>SkinSettings_Button</include>
             <label>320178</label>
             <onclick>Skin.ToggleSetting(EnableNetflixLogo)</onclick>
             <selected>!Skin.HasSetting(EnableNetflixLogo)</selected>
+            <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
+        </control>
+		<!-- Disable Welcome Pop-Up Message Notification -->        
+		<control type="radiobutton" id="8026">
+            <description/>
+            <include>SkinSettings_Button</include>
+            <label>31902</label>
+            <onclick>Skin.ToggleSetting(EnableWelcomeMsg)</onclick>
+            <selected>Skin.HasSetting(EnableWelcomeMsg)</selected>
             <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
         </control>
 		<!-- Enable Netflix Profile Icons -->    
@@ -3317,21 +3336,44 @@
             <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=user_picture,header=$LOCALIZE[320100]])</onclick>
             <visible>Skin.HasSetting(EnableNetflixIcons) + !Skin.HasSetting(Disableprofile)</visible>
         </control>
-        <!-- Disable Welcome Pop-Up Message Notification -->        
-		<control type="radiobutton" id="8026">
-            <description/>
-            <include>SkinSettings_Button</include>
-            <label>31902</label>
-            <onclick>Skin.ToggleSetting(EnableWelcomeMsg)</onclick>
-            <selected>Skin.HasSetting(EnableWelcomeMsg)</selected>
-            <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
-        </control>
-		<!-- Season Greetings -->
+        <!-- Season Greetings -->
 		<control type="button" id="2034">
             <include>SkinSettings_Button</include>
             <label>31104</label>
             <label2>$INFO[Skin.String(season_greetings.label)]</label2>
             <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=season_greetings,header=$LOCALIZE[31104])</onclick>
         </control>		                                                                 
-    </include>
+        <!--Bingie Screensaver Image Change Time-->
+        <control type="radiobutton" id="2072">
+            <include>SkinSettings_Button</include>
+            <label>320238</label>
+            <onclick>Skin.ToggleSetting(ImageChangeTime)</onclick>
+            <selected>!Skin.HasSetting(ImageChangeTime)</selected>
+            <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
+        </control>
+	    <!--Bingie Screensaver Image Fade Time-->
+        <control type="radiobutton" id="2073">
+            <include>SkinSettings_Button</include>
+            <label>320239</label>
+            <onclick>Skin.ToggleSetting(ImageFadeTime)</onclick>
+            <selected>!Skin.HasSetting(ImageFadeTime)</selected>
+            <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
+        </control>
+	    <!--Disable Netflix Logo on Bingie Screensaver-->
+        <control type="radiobutton" id="2074">
+            <include>SkinSettings_Button</include>
+            <label>320240</label>
+            <onclick>Skin.ToggleSetting(NetflixLogoScreensaver)</onclick>
+            <selected>!Skin.HasSetting(NetflixLogoScreensaver)</selected>
+            <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
+        </control>
+	    <!-- Disable Clearlogo in Bingie Home -->
+        <control type="radiobutton" id="2075">
+            <include>SkinSettings_Button</include>
+            <label>320241</label>
+            <onclick>Skin.ToggleSetting(DisableScreensaverClearlogo)</onclick>
+            <selected>!Skin.HasSetting(DisableScreensaverClearlogo)</selected>
+            <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
+        </control>
+	</include>
 </includes>

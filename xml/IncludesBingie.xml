@@ -2791,7 +2791,7 @@
                     <param name="widget" value="Spotlight" />
                 </include>
             </focusedlayout>
-			<content target="videos" limit="1" browse="never">$VAR[BingieHomeSpotlightWidgetContent]</content>
+            <content target="videos" limit="1" browse="never">$VAR[BingieHomeSpotlightWidgetContent]</content>
         </control>
     </include>
     <!-- SPOTLIGHT LOADING SPINNER -->
@@ -4531,6 +4531,46 @@
 		<include condition="String.IsEqual(Skin.String(user_picture),18)">user_18</include>
 		<include condition="String.IsEqual(Skin.String(user_picture),19)">user_19</include>
 		<include condition="String.IsEqual(Skin.String(user_picture),20)">user_20</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),21)">user_21</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),22)">user_22</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),23)">user_23</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),24)">user_24</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),25)">user_25</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),26)">user_26</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),27)">user_27</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),28)">user_28</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),29)">user_29</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),30)">user_30</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),31)">user_31</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),32)">user_32</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),33)">user_33</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),34)">user_34</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),35)">user_35</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),36)">user_36</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),37)">user_37</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),38)">user_38</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),39)">user_39</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),40)">user_40</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),41)">user_41</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),42)">user_42</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),43)">user_43</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),44)">user_44</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),45)">user_45</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),46)">user_46</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),47)">user_47</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),48)">user_48</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),49)">user_49</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),50)">user_50</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),51)">user_51</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),52)">user_52</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),53)">user_53</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),54)">user_54</include>
+		<include condition="String.IsEqual(Skin.String(user_picture),55)">user_55</include>
+	
+	
+	
+	
+	
 	</include>
 	
 	<variable name="HubNames">

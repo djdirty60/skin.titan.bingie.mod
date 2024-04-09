@@ -1478,7 +1478,7 @@
     </include>
     
     <include name="widget_base_content_normal">
-        <content sortby="$PARAM[widgetSortBy]" sortorder="$PARAM[widgetSortOrder]" limit="$PARAM[widgetLimit]" target="$PARAM[widgetTarget]">$PARAM[widgetPath]</content>
+        <content sortby="$PARAM[widgetSortBy]" sortorder="$PARAM[widgetSortOrder]" limit="$PARAM[widgetLimit]" target="$PARAM[widgetTarget]" browse="never">$PARAM[widgetPath]</content>
     </include>
     <include name="widget_base_content_refresh">
         <content target="$PARAM[widgetTarget]">$VAR[$PARAM[widgetid]-refresh]</content>

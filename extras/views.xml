@@ -2,9 +2,9 @@
     <view id="Simple List" value="10" languageid="31567" type="tvchannels,tvrecordings"/>
     <view id="List" value="50" languageid="31443" type="all,!tvchannels,!tvrecordings" excludefromdisable="true"/>
     <view id="Bingie Main Landscape" value="523" languageid="31018" type="movies,setmovies,tvshows,seasons,episodes,sets,musicvideos" />
-    <view id="Bingie Main Poster" value="526" languageid="31027" type="movies,setmovies,tvshows,seasons,sets,actors" />
-    <view id="Bingie Episodes" value="525" languageid="31827" type="episodes" />
-	<view id="Bingie Seasons" value="527" languageid="31095" type="seasons" />
+    <view id="Bingie Main Poster" value="526" languageid="31027" type="movies,setmovies,tvshows,seasons,sets,actors" excludefromdisable="true"/>
+    <view id="Bingie Episodes" value="525" languageid="31827" type="episodes" excludefromdisable="true"/>
+	<view id="Bingie Seasons" value="527" languageid="31095" type="seasons" excludefromdisable="true"/>
     <view id="Big List" value="51" languageid="31444" type="all,!addons,!images,!tvchannels,!tvrecordings" />
     <view id="Big List 2" value="504" languageid="31643" type="all,!addons,!images,!tvchannels,!tvrecordings" />
     <view id="Low List" value="515" languageid="31442" type="all,!addons,!images,!tvchannels,!tvrecordings" />	

@@ -1746,7 +1746,8 @@
                                 <onclick condition="Window.IsActive(Custom_1190_TMDbHelperCast.xml) + !Window.IsActive(Custom_1191_TMDbHelper.xml)">AlarmClock(PlayMovie,PlayMedia($ESCINFO[Container(1234).ListItem.FileNameAndPath],resume),00:01,silent)</onclick>
 								<onclick condition="Window.IsActive(Custom_1191_TMDbHelper.xml) + !Window.IsActive(Custom_1190_TMDbHelperCast.xml)">RunScript(plugin.video.themoviedb.helper,recommendations=onaction,window_id=1191,after=True,builtin='PlayMedia($ESCINFO[Container(1234).ListItem.FileNameAndPath],resume)')</onclick>
                             </control>
-
+                            
+							
                             <!-- Play -->
                             <control type="radiobutton" id="80">
                                 <!-- <visible>Skin.HasSetting(videoinfo_button_play)</visible> -->
@@ -1847,7 +1848,8 @@
 								<!-- play episode with tmdb helper -->
 								<onclick condition="Control.IsVisible(1234) + String.IsEqual(ListItem.dbtype,tvshow) + !Window.IsActive(Custom_1191_TMDbHelper.xml) + Window.IsActive(Custom_1190_TMDbHelperCsst.xml)">AlarmClock(PlayMovie,PlayMedia($INFO[Container(1234).ListItemAbsolute(0).FolderPath],noresume),00:01,silent)</onclick>
                             </control>
-
+                            
+							
 							<!--More episodes-->
                             <control type="radiobutton" id="53">
                                 <visible>Skin.HasSetting(videoinfo_button_more_episodes)</visible>
@@ -1982,24 +1984,6 @@
 								<onclick condition="String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt,tmdb_id=$INFO[Container(99950).ListItem.Property(tmdb_id)],$VAR[Path_Param_Type],sync_type=watchlist)</onclick>
                             </control>
 							
-							<!-- Trakt Manager -->
-                            <control type="radiobutton" id="562">
-								<visible>!$EXP[IsEpisodeDBType]</visible>
-                                <visible>Skin.HasSetting(videoinfo_button_trakt)</visible>
-                                <visible>$EXP[IsTvShowDBTypeNoFallback] | $EXP[IsMovieDBTypeNoFallback]</visible>
-								<include>Bingie_InfoDialog_Button_Default_Defs</include>
-                                <include content="Bingie_InfoDialog_Button_Texture">
-                                    <param name="radiotexture" value="dialogs/videoinfo/info/trakt.png"/>
-                                </include>
-                                <label>$LOCALIZE[320220]</label>
-                                <radioposx>15</radioposx>
-								<radioposy>21</radioposy>
-                                <radiowidth>26</radiowidth>
-                                <radioheight>26</radioheight>
-                                <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt,tmdb_id=$INFO[ListItem.Property(tmdb_id)],$VAR[Path_Param_Type],cache_refresh)</onclick>
-								<onclick condition="String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt,tmdb_id=$INFO[Container(99950).ListItem.Property(tmdb_id)],$VAR[Path_Param_Type],cache_refresh)</onclick>
-                            </control>
-
 							<!-- Rate this title -->
                             <control type="radiobutton" id="58">
 								<visible>!Container.Content(tvshows)</visible>
@@ -2036,7 +2020,9 @@
                                 <onclick>SetFocus(700)</onclick>
                                 <include>Fade_Rate_Button</include>
                             </control>
-
+                             
+							<!-- Changed Rating Position -->
+							 
 							<!-- Change rating - thumbs down -->
                             <control type="radiobutton" id="592">
                                 <visible>Skin.HasSetting(videoinfo_button_myrating)</visible>
@@ -2055,6 +2041,26 @@
                                 <onclick>SetFocus(700)</onclick>
                                 <include>Fade_Rate_Button</include>
                             </control>
+							
+							
+							<!-- Trakt Manager -->
+                            <control type="radiobutton" id="562">
+								<visible>!$EXP[IsEpisodeDBType]</visible>
+                                <visible>Skin.HasSetting(videoinfo_button_trakt)</visible>
+                                <visible>$EXP[IsTvShowDBTypeNoFallback] | $EXP[IsMovieDBTypeNoFallback]</visible>
+								<include>Bingie_InfoDialog_Button_Default_Defs</include>
+                                <include content="Bingie_InfoDialog_Button_Texture">
+                                    <param name="radiotexture" value="dialogs/videoinfo/info/trakt.png"/>
+                                </include>
+                                <label>$LOCALIZE[320220]</label>
+                                <radioposx>15</radioposx>
+								<radioposy>21</radioposy>
+                                <radiowidth>26</radiowidth>
+                                <radioheight>26</radioheight>
+                                <onclick condition="!String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt,tmdb_id=$INFO[ListItem.Property(tmdb_id)],$VAR[Path_Param_Type],cache_refresh)</onclick>
+								<onclick condition="String.IsEmpty(ListItem.Property(tmdb_id))">RunScript(plugin.video.themoviedb.helper,sync_trakt,tmdb_id=$INFO[Container(99950).ListItem.Property(tmdb_id)],$VAR[Path_Param_Type],cache_refresh)</onclick>
+                            </control>
+							
 
 							<!--Plot & Critics-->
                             <control type="radiobutton" id="60">

@@ -691,7 +691,7 @@ msgid "Thriller & Suspense Series"
 msgstr ""
 
 msgctxt "#31198"
-msgid "Disable powermenu on home"
+msgid "Disable Powermenu on Home"
 msgstr ""
 
 msgctxt "#31200"
@@ -2114,7 +2114,7 @@ msgid "Enable auto rotate"
 msgstr ""
 
 msgctxt "#31724"
-msgid "Show total minutes instead of hour representation in duration"
+msgid "Show The Runtime in Minutes Instead of Hours in The Details Section"
 msgstr ""
 
 msgctxt "#31725"
@@ -3573,7 +3573,7 @@ msgid "Prefer IMDB/RT/TVDB Ratings over Percentage on Details Row"
 msgstr ""
 
 msgctxt "#320160"
-msgid "Prefer white logos on Details Row"
+msgid "Prefer White Logos on Details Row"
 msgstr ""
 
 msgctxt "#320161"
@@ -3633,19 +3633,19 @@ msgid "Hide Ratings and Studio Icon While Trailer is Playing"
 msgstr ""
 
 msgctxt "#320175"
-msgid "Disable profile on sideblade menu"
+msgid "Disable Profile on Sideblade Menu"
 msgstr ""
 
 msgctxt "#320176"
-msgid "Use Netflix user profile icon instead default"
+msgid "Use Netflix user Profile Icon Instead of Default"
 msgstr ""
 
 msgctxt "#320177"
-msgid "Disable static slim menu"
+msgid "Disable Static Slim Menu"
 msgstr ""
 
 msgctxt "#320178"
-msgid "Disable Netflix logo on home and settings"
+msgid "Disable Netflix logo on Home and Settings"
 msgstr ""
 
 msgctxt "#320179"
@@ -3657,7 +3657,7 @@ msgid "Halloween Animation"
 msgstr ""
 
 msgctxt "#320181"
-msgid "Disable total media count in Bingie views"
+msgid "Disable Total Media Count in Bingie Views"
 msgstr ""
 
 msgctxt "#320182"
@@ -3882,4 +3882,20 @@ msgstr ""
 
 msgctxt "#320237"
 msgid "Enable air date"
+msgstr ""
+
+msgctxt "#320238"
+msgid "Bingie Screensaver - Slow Down Image Change Time"
+msgstr ""
+
+msgctxt "#320239"
+msgid "Bingie Screensaver - Slow Down Image Scroll Speed"
+msgstr ""
+
+msgctxt "#320240"
+msgid "Bingie Screensaver - Disable Netflix Logo"
+msgstr ""
+
+msgctxt "#320241"
+msgid "Bingie Screensaver - Disable Clearlogo"
 msgstr ""

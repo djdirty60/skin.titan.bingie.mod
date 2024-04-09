@@ -428,7 +428,7 @@
 					<label>$ADDON[script.skinshortcuts 32025]</label>
 				</control>
 				
-				<!--edit thumbnail -->
+				<!--Edit Thumbnail -->
 				<control type="button" id="4311">
 					<width>500</width>
 					<align>center</align>
@@ -436,7 +436,7 @@
                     <onclick>RunScript(script.skin.helper.service,action=selectimage,skinshortcutsproperty=thumb,header=$LOCALIZE[31369],allowmulti=true,resourceaddon=resource.images.skinicons,skinhelperbackgrounds=true,skinstring=CustomBackgroundSetting,currentvalue=$INFO[Container(211).ListItem.Property(ThumbName)])</onclick>
 				</control>
 				
-				<!--change shortcut-->
+				<!--Change Shortcut-->
 				<control type="button" id="401"> 
 					<width>500</width>
 					<align>center</align>
@@ -444,7 +444,7 @@
 					<label>31175</label>
 				</control>
 				
-				<!--sub menu-->
+				<!--Sub Menu-->
 				<control type="button" id="405"> 
 					<width>500</width>
 					<align>center</align>

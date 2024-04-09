@@ -294,7 +294,7 @@
         <onload condition="!Skin.String(ActiveSpinControlColor) + !Skin.String(ActiveSpinControlColor.name)">Skin.SetString(ActiveSpinControlColor.name,Red)</onload>
         <onload condition="!Skin.String(ActiveSpinControlColor)">Skin.SetString(ActiveSpinControlColor,ffe50914)</onload>
 		<!-- MPAA colors -->
-		<onload condition="!Skin.String(GPanelColor)">Skin.SetString(GPanelColor,ff0ac700)</onload>
+		<onload condition="!Skin.String(GPanelColor)">Skin.SetString(GPanelColor,ff008000)</onload>
         <onload condition="!Skin.String(GPanelColor.name)">Skin.SetString(GPanelColor.name,Green)</onload>
         <onload condition="!Skin.String(PGPanelColor)">Skin.SetString(PGPanelColor,fffbad00)</onload>
         <onload condition="!Skin.String(PGPanelColor.name)">Skin.SetString(PGPanelColor.name,Yellow)</onload>
@@ -304,7 +304,7 @@
         <onload condition="!Skin.String(RPanelColor)">Skin.SetString(RPanelColor.name,Red)</onload>
 		<onload condition="!Skin.String(NC17PanelColor)">Skin.SetString(NC17PanelColor,ffFB4F93)</onload>
         <onload condition="!Skin.String(NC17PanelColor)">Skin.SetString(NC17PanelColor.name,Pink)</onload>
-		<onload condition="!Skin.String(NRPanelColor)">Skin.SetString(NRPanelColor,ff006ed2)</onload>
+		<onload condition="!Skin.String(NRPanelColor)">Skin.SetString(NRPanelColor,ff0000ff)</onload>
         <onload condition="!Skin.String(NRPanelColor)">Skin.SetString(NRPanelColor.name,Blue)</onload>
 		<onload condition="!Skin.String(PanelBorderColor)">Skin.SetString(PanelBorderColor,ffffffff)</onload>
 		<onload condition="!Skin.String(PanelBorderColor)">Skin.SetString(PanelBorderColor.name,White)</onload>
