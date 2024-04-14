@@ -1478,10 +1478,10 @@
     </include>
     
     <include name="widget_base_content_normal">
-        <content sortby="$PARAM[widgetSortBy]" sortorder="$PARAM[widgetSortOrder]" limit="$PARAM[widgetLimit]" target="$PARAM[widgetTarget]" browse="never">$PARAM[widgetPath]</content>
+        <content browse="never" sortby="$PARAM[widgetSortBy]" sortorder="$PARAM[widgetSortOrder]" limit="$PARAM[widgetLimit]" target="$PARAM[widgetTarget]" browse="never">$PARAM[widgetPath]</content>
     </include>
     <include name="widget_base_content_refresh">
-        <content target="$PARAM[widgetTarget]">$VAR[$PARAM[widgetid]-refresh]</content>
+        <content browse="never" target="$PARAM[widgetTarget]">$VAR[$PARAM[widgetid]-refresh]</content>
     </include>
     <include name="widget_base_content_submenu">
         <content><include>skinshortcuts-group-$PARAM[submenuid]</include></content>
@@ -1499,8 +1499,8 @@
         <include>StaticWidget_Categories</include>
     </include>
     <include name="widget_base_content_mylist">
-        <content sortby="$PARAM[widgetSortBy]" sortorder="$PARAM[widgetSortOrder]" limit="$PARAM[widgetLimit]" target="$PARAM[widgetTarget]">special://skin/playlists/mylistshows.xsp</content>
-        <content sortby="$PARAM[widgetSortBy]" sortorder="$PARAM[widgetSortOrder]" limit="$PARAM[widgetLimit]" target="$PARAM[widgetTarget]">special://skin/playlists/mylistmovies.xsp</content>
+        <content browse="never" sortby="$PARAM[widgetSortBy]" sortorder="$PARAM[widgetSortOrder]" limit="$PARAM[widgetLimit]" target="$PARAM[widgetTarget]">special://skin/playlists/mylistshows.xsp</content>
+        <content browse="never" sortby="$PARAM[widgetSortBy]" sortorder="$PARAM[widgetSortOrder]" limit="$PARAM[widgetLimit]" target="$PARAM[widgetTarget]">special://skin/playlists/mylistmovies.xsp</content>
     </include>
 
     <include name="StaticWidget_Categories">
