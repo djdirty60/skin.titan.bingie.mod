@@ -152,7 +152,7 @@
                 <param name="widgetTags" value="WidgetTagOverlayAuto" />
                 <param name="multiRows" value="false" />
             </include>
-            <content browse="never" sortby="$INFO[Skin.String($PARAM[skinsetting].sortby)]" sortorder="$INFO[Skin.String($PARAM[skinsetting].sortorder)]" limit="$INFO[Skin.String(WidgetsGlobalLimit)]" target="$INFO[Skin.String($PARAM[skinsetting].target)]" browse="never">$INFO[Skin.String($PARAM[skinsetting].path)]</content>
+            <content sortby="$INFO[Skin.String($PARAM[skinsetting].sortby)]" sortorder="$INFO[Skin.String($PARAM[skinsetting].sortorder)]" limit="$INFO[Skin.String(WidgetsGlobalLimit)]" target="$INFO[Skin.String($PARAM[skinsetting].target)]" browse="never">$INFO[Skin.String($PARAM[skinsetting].path)]</content>
             <visible>Skin.String($PARAM[skinsetting].path)</visible>
         </control>
     </include>
