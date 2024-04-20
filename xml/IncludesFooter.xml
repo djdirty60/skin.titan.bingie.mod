@@ -1504,7 +1504,7 @@
 				<texture background="true">$VAR[StudioLogoImg]</texture>
 				</control>
 				<control type="image" id="7774321">
-				<visible>!String.IsEmpty(Control.GetLabel(7774321)) + String.IsEmpty(Control.GetLabel(7771234))</visible>
+				<visible>!String.IsEmpty(Control.GetLabel(7774321))</visible>
 				<visible>Skin.HasSetting(EnableStudioLogoOnHome)</visible>
 				<top>46</top>
 				<left>-7</left>
