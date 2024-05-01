@@ -1514,7 +1514,6 @@
                 <fadetime>300</fadetime>
 				<texture background="true">$VAR[StudioLogoImg2]</texture>
 				</control>					
-				
 			</control>
 	</include>	
 

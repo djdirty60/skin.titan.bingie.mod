@@ -35,13 +35,13 @@
         </control>
             </control>
         </itemlayout>
-        <!-- Poster Focus Layout -->
+        <!-- Poster Focus Layout - Poster Zoom -->
 		<focusedlayout height="345" width="259">
             <control type="group">
                 <width>242</width>
                 <height>342</height>
-                <animation effect="zoom" center="auto" start="100" end="108" time="160" tween="quadratic" condition="Skin.HasSetting(View52_EnableZoomEffect)">Focus</animation>
-                <animation effect="zoom" center="auto" start="108" end="100" time="160" tween="quadratic" condition="Skin.HasSetting(View52_EnableZoomEffect)">Unfocus</animation>
+                <animation effect="zoom" center="auto" start="100" end="138" time="600" tween="quadratic" condition="Skin.HasSetting(View52_EnableZoomEffect)">Focus</animation>
+                <animation effect="zoom" center="auto" start="138" end="100" time="400" tween="quadratic" condition="Skin.HasSetting(View52_EnableZoomEffect)">Unfocus</animation>
                 <include>PosterPanelLayoutFocus</include>
 				<control type="group">
             <!--Watched Overlay-->

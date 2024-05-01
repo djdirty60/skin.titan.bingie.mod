@@ -2977,7 +2977,7 @@ msgid "OSD volume button color"
 msgstr ""
 
 msgctxt "#320011"
-msgid "TV Shows"
+msgid "Shows"
 msgstr ""
 
 msgctxt "#320012"

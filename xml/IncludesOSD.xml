@@ -1605,10 +1605,9 @@
 	
 	<include name="OSDButtonsModern">
         
-        <!--SeekBar -->
+         <!--SeekBar -->
         <!-- <include condition="Skin.HasSetting(UseSlimOSDPanel) + Player.HasVideo">SeekBar_Slim</include> -->
         <!-- <include condition="[!Skin.HasSetting(UseSlimOSDPanel) + !Skin.HasSetting(UseBingieOSD)] + Player.HasVideo">SeekBar_Normal</include> -->
-		<include condition="[!Skin.HasSetting(UseSlimOSDPanel) + Skin.HasSetting(UseBingieOSD)] + Player.HasVideo">SeekBar_Bingie</include>
 
 		<!-- OSD buttons -->
 		<include condition="Player.HasVideo + Skin.HasSetting(UseBingieOSD)">OSDButtons_Bingie_Layout_Factory</include>

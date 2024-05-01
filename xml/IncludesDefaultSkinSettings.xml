@@ -76,7 +76,7 @@
 		
 		<!-- default splash resolution -->
         <onload condition="String.IsEmpty(Skin.String(SplashAnimationResolution))">Skin.SetString(SplashAnimationResolution,1080p)</onload>
-        <!-- default color settings (titan default theme - BINGIE) -->
+        <!-- default color settings (Default Theme - BINGIE) -->
         <onload condition="!Skin.String(HomeWidgetsBorderColor)">Skin.SetString(HomeWidgetsBorderColor,None)</onload>
         <onload condition="!Skin.String(HomeWidgetsBorderColor.name)">Skin.SetString(HomeWidgetsBorderColor.name,None)</onload>
 		<onload condition="!Skin.String(LineUnderMenuIconsColor)">Skin.SetString(LineUnderMenuIconsColor,ffe50914)</onload>
@@ -208,8 +208,8 @@
         <onload condition="!Skin.String(ScrollbarBackgroundColor.name)">Skin.SetString(ScrollbarBackgroundColor.name,Very dark gray)</onload>
         <onload condition="!Skin.String(ScrollbarUnfocusedColor)">Skin.SetString(ScrollbarUnfocusedColor,ff646464)</onload>
         <onload condition="!Skin.String(ScrollbarUnfocusedColor.name)">Skin.SetString(ScrollbarUnfocusedColor.name,Dark gray)</onload>
-        <onload condition="!Skin.String(ScrollbarFocusedColor)">Skin.SetString(ScrollbarFocusedColor,ffb5b5b5)</onload>
-        <onload condition="!Skin.String(ScrollbarFocusedColor.name)">Skin.SetString(ScrollbarFocusedColor.name,Light gray)</onload>
+        <onload condition="!Skin.String(ScrollbarFocusedColor)">Skin.SetString(ScrollbarFocusedColor,ffcc0000)</onload>
+        <onload condition="!Skin.String(ScrollbarFocusedColor.name)">Skin.SetString(ScrollbarFocusedColor.name,red)</onload>
 		<onload condition="!Skin.String(BingiePlotTextColor)">Skin.SetString(BingiePlotTextColor,b3ffffff)</onload>
         <onload condition="!Skin.String(BingiePlotTextColor.name)">Skin.SetString(BingiePlotTextColor.name,Light gray)</onload>
 		<onload condition="!Skin.String(BingieDeatailsTextColor)">Skin.SetString(BingieDeatailsTextColor,a6ffffff)</onload>

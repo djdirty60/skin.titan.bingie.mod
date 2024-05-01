@@ -2321,7 +2321,7 @@
 				</control>								
 			</control>
 			
-			<!-- studio logo -->
+			<!-- Studio Logo 1 -->
 			<control type="group">
 				<animation effect="fade" start="0" end="100" time="300" delay="900">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
@@ -2337,6 +2337,7 @@
 					<aspectratio aligny="center" align="right">keep</aspectratio>
 					<texture background="true">$VAR[StudioLogoImg]</texture>					
 				</control>
+				<!-- Studio Logo 2 -->
 				<control type="image" id="69901">
 					<visible>!String.IsEmpty(Control.GetLabel(69901)) + String.IsEmpty(Control.GetLabel(6990)) + !Skin.HasSetting(EnableStudioLogoInfoDialog)</visible>
 					<visible>!String.IsEqual(Window.Property(AdditionalInfo),cast) + !String.IsEqual(Window.Property(AdditionalInfo),similar) + !String.IsEqual(Window.Property(AdditionalInfo),trailers)</visible>

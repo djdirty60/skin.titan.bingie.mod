@@ -2914,8 +2914,15 @@
         <!-- custom home spotlight -->
         <value condition="Window.IsActive(Home) + !String.IsEmpty(Skin.String(spotlighthome.path))">$INFO[Skin.String(spotlighthome.path)]</value>
         <value condition="Window.IsActive(Home) + Skin.HasSetting(SimilarContentSpotlight)">plugin://script.skin.helper.widgets/?action=similar&amp;mediatype=media&amp;limit=5&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</value>
-        <value condition="Window.IsActive(Home)">plugin://script.skin.helper.widgets/?action=randomshowsandmovies&amp;mediatype=media&amp;limit=5&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</value>
-        <!-- movies hub -->
+        
+		
+		<!-- Spotlight Default Movie/Shows -->
+		<value condition="Window.IsActive(Home)">plugin://script.skin.helper.widgets/?action=recentshowsandmovies&amp;mediatype=media&amp;limit=5&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</value>
+		<!-- Spotlight Default Movie/Shows -->
+		<!-- <value condition="Window.IsActive(Home)">plugin://script.skin.helper.widgets/?action=randomshowsandmovies&amp;mediatype=media&amp;limit=5&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</value> -->
+        
+		
+		<!-- movies hub -->
         <value condition="Window.IsActive(1111) + !String.IsEmpty(Skin.String(spotlightmovies.path))">$INFO[Skin.String(spotlightmovies.path)]</value>
         <value condition="Window.IsActive(1111) + Skin.String(spotlightmovies.label, default)">plugin://script.skin.helper.widgets/?action=random&amp;mediatype=movies&amp;limit=5&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</value>
         <value condition="Window.IsActive(1111)"/>
