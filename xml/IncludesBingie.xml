@@ -1969,7 +1969,7 @@
 			<include condition="Skin.HasSetting(DisableStaticSlimMenu)">No_Circular_Menu_AnimationsOriginal</include>
 
             
-		<!-- Logo / user profile button -->
+		<!-- Logo / User Profile Button -->
         <control type="group">
                 <visible>$EXP[IsMainMenuOpened] + !Skin.HasSetting(Disableprofile)</visible>
                 <top>54</top>

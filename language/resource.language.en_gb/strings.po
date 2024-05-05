@@ -3899,3 +3899,7 @@ msgstr ""
 msgctxt "#320241"
 msgid "Bingie Screensaver - Disable Clearlogo"
 msgstr ""
+
+msgctxt "#320242"
+msgid "Enable 2 Studio Logos on Home/Bingie Views"
+msgid ""

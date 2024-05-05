@@ -538,21 +538,21 @@
             <selected>!Skin.HasSetting(EnableFixedFrameWidgets)</selected>
             <visible>$EXP[IsSupportedFixedFrameLayout] + String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
         </control>
-        <!-- display tags on widgets -->
+        <!-- Display Tags on Widgets -->
         <control type="button" id="31675">
             <include>SkinSettings_Button</include>
             <label>31675</label>
             <label2>$INFO[Skin.String(Widgets_DisplayTags.label)]</label2>
             <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=Widgets_DisplayTags,header=$LOCALIZE[31675])</onclick>
         </control>
-        <!-- widget rotate-->
+        <!-- Widget Rotate-->
         <control type="button" id="31672">
             <include>SkinSettings_Button</include>
             <label>31672</label>
             <label2>$INFO[Skin.String(widgets_rotate.label)]</label2>
             <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=widgets_rotate,header=$LOCALIZE[31672])</onclick>
         </control>
-        <!-- widget rotate delay-->
+        <!-- Widget Rotate Delay-->
         <control type="button" id="31679">
             <include>SkinSettings_Button</include>
             <label>31679</label>
@@ -560,7 +560,7 @@
             <onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=widgets_rotate_delay,header=$LOCALIZE[31679])</onclick>
             <visible>Skin.String(widgets_rotate) + !String.IsEqual(Skin.String(widgets_rotate),disabled)</visible>
         </control>
-        <!-- widget rotate pause-->
+        <!-- Widget Rotate Pause-->
         <control type="radiobutton" id="31821">
             <include>SkinSettings_Button</include>
             <label>31821</label>
@@ -575,7 +575,7 @@
             <onclick>Skin.ToggleSetting(New_Circular)</onclick>
             <selected>Skin.HasSetting(New_Circular)</selected>
         </control>
-        <!--enable showinformation skin bypass-->
+        <!--Enable Showinformation Skin Bypass-->
         <control type="radiobutton" id="23721">
             <include>SkinSettings_Button</include>
             <label>31886</label>
@@ -583,7 +583,7 @@
             <selected>Skin.HasSetting(ShowInformationBypass)</selected>
             <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
         </control>
-        <!--prefer tv show art for episodes-->
+        <!--Prefer TV Show art for Episodes-->
         <control type="radiobutton" id="31304">
             <include>SkinSettings_Button</include>
             <label>31304</label>
@@ -616,7 +616,7 @@
             <onclick>Skin.ToggleSetting(EnableRatingsOnHome)</onclick>
             <selected>Skin.HasSetting(EnableRatingsOnHome)</selected>
         </control>
-		<!-- ratings to show on home - multiselect -->
+		<!-- Ratings to show on Home - Multiselect -->
 		<include content="SkinSettings_ActionButton">
             <param name="id" value="2039" />
             <param name="label" value="      $LOCALIZE[31692]" />
@@ -630,15 +630,24 @@
             <onclick>Skin.ToggleSetting(EnableStudioLogoOnHome)</onclick>
             <selected>Skin.HasSetting(EnableStudioLogoOnHome)</selected>
         </control>					
+		<!-- Enable Multiple Studio Logo on Home -->
+		<control type="radiobutton" id="2076">
+            <include>SkinSettings_Button</include>
+            <label>      $LOCALIZE[320242]</label>
+            <onclick>Skin.ToggleSetting(EnableMultiStudioLogoOnHome)</onclick>
+            <selected>Skin.HasSetting(EnableMultiStudioLogoOnHome)</selected>
+            <visible>Skin.HasSetting(EnableStudioLogoOnHome)</visible>
+		</control>					
+			
 			<!--Prefer white footer -->
-			<control type="radiobutton" id="2040">
+		<control type="radiobutton" id="2040">
             <include>SkinSettings_Button</include>
             <label>$LOCALIZE[31896]</label>
             <onclick>Skin.ToggleSetting(PreferWhiteFooter)</onclick>
 			<onclick condition="!System.HasAddon(resource.images.studios.white)">InstallAddon(resource.images.studios.white)</onclick>
 			<selected>Skin.HasSetting(PreferWhiteFooter)</selected>
             <visible>String.IsEqual(Skin.String(HomeLayout),bingie)</visible>
-            </control>								          	
+           </control>								          	
 		<!-- Hide Ratings & Studio Logos on Spotlight/Widgets -->
         <include content="SkinSettings_ActionButton">
             <param name="id" value="2021" />

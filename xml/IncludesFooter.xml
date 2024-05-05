@@ -1505,7 +1505,7 @@
 				</control>
 				<control type="image" id="7774321">
 				<visible>!String.IsEmpty(Control.GetLabel(7774321))</visible>
-				<visible>Skin.HasSetting(EnableStudioLogoOnHome)</visible>
+				<visible>Skin.HasSetting(EnableMultiStudioLogoOnHome)</visible>
 				<top>46</top>
 				<left>-7</left>
                 <width>102</width>
@@ -1970,14 +1970,14 @@
 	<variable name="TraktRatingValue">
         <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Trakt_Rating)) + !String.IsEqual(Container(99950).ListItem.Property(Trakt_Rating),0.0)">$INFO[Container(99950).ListItem.Property(Trakt_Rating)]</value>
     </variable>
-
+    <!-- Studio Logo Image -->
     <variable name="StudioLogoImg">
         <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Network.1.Name)) + !Skin.HasSetting(PreferWhiteFooter) + !$EXP[IsMovieDBType]">$INFO[Container(99950).ListItem.Property(Network.1.Name),resource://resource.images.studios.coloured/,.png]</value>
         <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Studio.1.Name)) + !Skin.HasSetting(PreferWhiteFooter) + $EXP[IsMovieDBType]">$INFO[Container(99950).ListItem.Property(Studio.1.Name),resource://resource.images.studios.coloured/,.png]</value>
 		<value condition="!String.IsEmpty(Container(99950).ListItem.Property(Network.1.Name)) + Skin.HasSetting(PreferWhiteFooter) + !$EXP[IsMovieDBType]">$INFO[Container(99950).ListItem.Property(Network.1.Name),resource://resource.images.studios.white/,.png]</value>
         <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Studio.1.Name)) + Skin.HasSetting(PreferWhiteFooter) + $EXP[IsMovieDBType]">$INFO[Container(99950).ListItem.Property(Studio.1.Name),resource://resource.images.studios.white/,.png]</value>
     </variable>
-	
+	<!-- Studio Logo Image 2 -->
 	<variable name="StudioLogoImg2">
         <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Network.2.Name)) + !Skin.HasSetting(PreferWhiteFooter) + !$EXP[IsMovieDBType]">$INFO[Container(99950).ListItem.Property(Network.2.Name),resource://resource.images.studios.coloured/,.png]</value>
         <value condition="!String.IsEmpty(Container(99950).ListItem.Property(Studio.2.Name)) + !Skin.HasSetting(PreferWhiteFooter) + $EXP[IsMovieDBType]">$INFO[Container(99950).ListItem.Property(Studio.2.Name),resource://resource.images.studios.coloured/,.png]</value>
