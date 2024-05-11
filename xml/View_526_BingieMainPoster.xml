@@ -45,9 +45,7 @@
             <!-- Poster View as Group 526 -->
             <control type="group">
                 <left>131</left>
-                <!-- <top>600</top> -->                      <!-- Default Setting -->
-                <!-- <top>735</top> -->
-                <top>710</top>
+                <top>600</top>
                 <width>1660</width>
                 <!-- Content Header -->
                 <control type="label">
