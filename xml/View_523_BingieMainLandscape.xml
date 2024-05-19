@@ -11,15 +11,14 @@
                 <param name="id" value="523" />
             </include>
 
-            <!-- View 523  Landscape Position -->
+            <!-- View 523 -->
             <control type="group">
 				<visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
 				<include>Animation_Right_Home</include>
                 <left>131</left>
-                <top>650</top>
+                <top>560</top>
                 <width>1660</width>
-                
-				<!-- Content Header -->
+                <!-- Content Header -->
                 <control type="label">
                     <width>100%</width>
                     <height>40</height>
@@ -80,7 +79,7 @@
                 <param name="viewtype" value="$LOCALIZE[31018]" />
             </include>
             <focusedposition>0</focusedposition>
-            <top>70</top>
+            <top>51</top>
             <width>1668</width>
             <height>470</height>
             <orientation>vertical</orientation>
@@ -98,14 +97,13 @@
 			<onleft condition="$EXP[IsPlayingUnrecognizedContent] + Skin.HasSetting(DetailsAutoTrailer) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TrailerPlaying))] + !String.IsEqual(Window(Home).Property(TrailerPlaying),fullscreen)">PlayerControl(Stop)</onleft>
 			<onback>CancelAlarm(preview_delay,silent)</onback>
 			<onback condition="$EXP[IsPlayingUnrecognizedContent] + Skin.HasSetting(DetailsAutoTrailer) + [!String.IsEmpty(ListItem.Trailer) | !String.IsEmpty(Window(Home).Property(TrailerPlaying))] + !String.IsEqual(Window(Home).Property(TrailerPlaying),fullscreen)">PlayerControl(Stop)</onback>
-            <!-- Landscape Gap Position -->
-			<itemlayout height="240" width="333">
+            <itemlayout height="193" width="333">
                 <control type="group">
                     <width>335</width>
-                    <height>230</height>
+                    <height>195</height>
                     <include>ThumbsViewItemBingieLayout</include>
-					<!-- fallback logo image -->
 					<control type="image">
+						<!-- fallback logo image -->
 						<width>333</width>
 						<height>195</height>
 						<bottom>-43</bottom>
@@ -120,10 +118,9 @@
                 </control>
             </itemlayout>
             <focusedlayout height="193" width="333">
-                <!-- Landscape Selected Focus -->
-				<control type="group">
+                <control type="group">
                     <width>335</width>
-                    <height>230</height>
+                    <height>195</height>
                     <control type="image">
                         <!--Panel Normal-->
                         <texture background="true">home/home_matte3.png</texture>
